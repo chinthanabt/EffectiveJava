@@ -1,7 +1,6 @@
 package com.chinthana.effectivejava.chapterone;
 
-//Java code for serialization and deserialization  
-//of a Java object 
+//Java code for serialization and deserialization
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
@@ -32,23 +31,22 @@ class Demo {
 				test2 = (SerializationDemo) constructor.newInstance();
 			}
 		}
-		
-		 System.out.println("Hash codes:- " + test2.hashCode() + "," +
-				 instance1.hashCode());
-		
+
+		System.out.println("Hash codes:- " + test2.hashCode() + "," + instance1.hashCode());
+
 		String filename = "file.ser";
 		// Serialization
-		// Saving of object in a file	
+		// Saving of object in a file
 		ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(filename));
 
 		// Method for serialization of object
 		out.writeObject(instance1);
 		out.close();
-		
+
 		System.out.println("Object has been serialized");
 
 		// De-serialization
-		// Reading the object from a file		
+		// Reading the object from a file
 		ObjectInputStream out2 = new ObjectInputStream(new FileInputStream(filename));
 
 		// Method for de-serialization of object
@@ -57,7 +55,7 @@ class Demo {
 		System.out.println("Object has been deserialized");
 		System.out.println("instance1 code:- " + instance1.hashCode());
 		System.out.println("instance2 code:- " + instance2.hashCode());
-		
+
 		// De-serialization
 		// Reading the object from a file
 		ObjectInputStream out3 = new ObjectInputStream(new FileInputStream(filename));

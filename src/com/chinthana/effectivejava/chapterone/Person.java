@@ -85,5 +85,5 @@ class Person {
 				+ ", skingColor=" + skingColor + ", hairColor=" + hairColor + ", height=" + height + ", weight="
 				+ weight + "]";
 	}
-	
+
 }
