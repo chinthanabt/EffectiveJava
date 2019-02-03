@@ -6,9 +6,15 @@ public class Employee {
 	private String email;
 	private String idNumber;
 	private int empNumber;
-
-	protected Employee() {
-		super();
+	private String address;
+	private String phone;
+	private String gender;
+	private String religion;
+	private String marriageStatus;
+	
+	//No argument constructor
+	public Employee() {
+		
 	}
 
 	public void setfName(String fName) {

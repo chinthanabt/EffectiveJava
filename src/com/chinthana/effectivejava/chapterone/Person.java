@@ -8,22 +8,9 @@ class Person {
 	private final String skingColor;
 	private final String hairColor;
 	private final int height;
-	private final int weight;
+	private final int weight;	
 
-	public Person(String fName, String lName, String description, int age, String skingColor, String hairColor,
-			int height, int weight) {
-		super();
-		this.fName = fName;
-		this.lName = lName;
-		this.description = description;
-		this.age = age;
-		this.skingColor = skingColor;
-		this.hairColor = hairColor;
-		this.height = height;
-		this.weight = weight;
-	}
-
-	public static class PersonBuider {
+	public static class PersonBuilder {
 		private String fName;
 		private String lName;
 		private String description;
@@ -32,53 +19,65 @@ class Person {
 		private String hairColor;
 		private int height;
 		private int weight;
-
-		public PersonBuider setfName(String fName) {
+	
+		public PersonBuilder setfName(String fName) {
 			this.fName = fName;
 			return this;
 		}
-
-		public PersonBuider setlName(String lName) {
+	
+		public PersonBuilder setlName(String lName) {
 			this.lName = lName;
 			return this;
 		}
-
-		public PersonBuider setDescription(String description) {
+	
+		public PersonBuilder setDescription(String description) {
 			this.description = description;
 			return this;
 		}
-
-		public PersonBuider setAge(int age) {
+	
+		public PersonBuilder setAge(int age) {
 			this.age = age;
 			return this;
 		}
-
-		public PersonBuider setSkingColor(String skingColor) {
+	
+		public PersonBuilder setSkingColor(String skingColor) {
 			this.skingColor = skingColor;
 			return this;
 		}
-
-		public PersonBuider setHairColor(String hairColor) {
+	
+		public PersonBuilder setHairColor(String hairColor) {
 			this.hairColor = hairColor;
 			return this;
 		}
-
-		public PersonBuider setHeight(int height) {
+	
+		public PersonBuilder setHeight(int height) {
 			this.height = height;
 			return this;
 		}
-
-		public PersonBuider setWeight(int weight) {
+	
+		public PersonBuilder setWeight(int weight) {
 			this.weight = weight;
 			return this;
 		}
-
-		// Build the person here
+		
+		//Build the person here
 		public Person buid() {
-			return new Person(fName, lName, description, age, skingColor, hairColor, height, weight);
+			return new Person(this);
 		}
+	
 	}
-
+	
+	Person(PersonBuilder builder) {	
+		this.fName = builder.fName;
+		this.lName = builder.lName;
+		this.description = builder. description;
+		this.age = builder.age;
+		this.skingColor = builder.skingColor;
+		this.hairColor = builder.hairColor;
+		this.height = builder.height;
+		this.weight = builder.weight;
+	}
+	
 	@Override
 	public String toString() {
 		return "Person [fName=" + fName + ", lName=" + lName + ", description=" + description + ", age=" + age

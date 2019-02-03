@@ -6,12 +6,10 @@ public class Phone {
 	final double ram;
 	final String color;
 	final double memory;
-	// String cpu;
-	// String os;
+	String cpu;
+	String os;
 	// int serialNumber;
 	// int imeiNumber;
-	// String color;
-	// double memory;
 	// double screenSize;
 	// double weight;
 	// double talkTime;
@@ -35,16 +33,24 @@ public class Phone {
 	// Constructor with three optional fields
 	public Phone(final String manumanufacturer, final String version, final double ram, final String color,
 			final double memory) {
+		this(manumanufacturer, version, ram, color, memory, "Hexa-core");
+	}
+
+	// Constructor with four optional fields
+	protected Phone(String manumanufacturer, String version, double ram, String color, double memory, String cpu) {
+		this(manumanufacturer, version, ram, color, memory, cpu, "iOS 12");
+	}
+	
+	// Constructor with five optional fields
+	protected Phone(String manumanufacturer, String version, double ram, String color, double memory, String cpu,
+			String os) {		
 		this.manumanufacturer = manumanufacturer;
 		this.version = version;
 		this.ram = ram;
 		this.color = color;
 		this.memory = memory;
+		this.cpu = cpu;
+		this.os = os;
 	}
-
-	@Override
-	public String toString() {
-		return "Phone [manumanufacturer=" + manumanufacturer + ", version=" + version + ", ram=" + ram + ", color="
-				+ color + ", memory=" + memory + "]";
-	}
+	
 }

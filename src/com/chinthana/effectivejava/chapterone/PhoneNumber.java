@@ -5,7 +5,7 @@ public class PhoneNumber {
 	private int countryCode;
 	private static final PhoneNumber COMMON_NUMBER = new PhoneNumber(111);
 
-	private PhoneNumber(final int number) {
+	public PhoneNumber(final int number) {
 		this.number = number;
 	}
 

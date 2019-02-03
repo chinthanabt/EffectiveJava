@@ -4,7 +4,7 @@ public class TelescopingConstructorDemo {
 	
 	public static void main (String ...arg) {
 		//Traditional way 
-		Phone p1 = new Phone("Apple", "8", 0, null, 0);
+		Phone p1 = new Phone("Apple", "8", 0, null, 0, null, null);
 		
 		System.out.println("p1 - " + p1);
 		
