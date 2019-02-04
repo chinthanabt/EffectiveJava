@@ -1,6 +1,6 @@
 package com.chinthana.effectivejava.chapterone;
 
-class Person {
+public class Person {
 	private final String fName;
 	private final String lName;
 	private final String description;
@@ -8,7 +8,7 @@ class Person {
 	private final String skingColor;
 	private final String hairColor;
 	private final int height;
-	private final int weight;	
+	private final int weight;
 
 	public static class PersonBuilder {
 		private String fName;
@@ -19,65 +19,65 @@ class Person {
 		private String hairColor;
 		private int height;
 		private int weight;
-	
-		public PersonBuilder setfName(String fName) {
+
+		public PersonBuilder setfName(final String fName) {
 			this.fName = fName;
 			return this;
 		}
-	
-		public PersonBuilder setlName(String lName) {
+
+		public PersonBuilder setlName(final String lName) {
 			this.lName = lName;
 			return this;
 		}
-	
-		public PersonBuilder setDescription(String description) {
+
+		public PersonBuilder setDescription(final String description) {
 			this.description = description;
 			return this;
 		}
-	
-		public PersonBuilder setAge(int age) {
+
+		public PersonBuilder setAge(final int age) {
 			this.age = age;
 			return this;
 		}
-	
-		public PersonBuilder setSkingColor(String skingColor) {
+
+		public PersonBuilder setSkingColor(final String skingColor) {
 			this.skingColor = skingColor;
 			return this;
 		}
-	
-		public PersonBuilder setHairColor(String hairColor) {
+
+		public PersonBuilder setHairColor(final String hairColor) {
 			this.hairColor = hairColor;
 			return this;
 		}
-	
-		public PersonBuilder setHeight(int height) {
+
+		public PersonBuilder setHeight(final int height) {
 			this.height = height;
 			return this;
 		}
-	
-		public PersonBuilder setWeight(int weight) {
+
+		public PersonBuilder setWeight(final int weight) {
 			this.weight = weight;
 			return this;
 		}
-		
-		//Build the person here
-		public Person buid() {
+
+		// Build the person here
+		public Person build() {
 			return new Person(this);
 		}
-	
+
 	}
-	
-	Person(PersonBuilder builder) {	
+
+	private Person(PersonBuilder builder) {
 		this.fName = builder.fName;
 		this.lName = builder.lName;
-		this.description = builder. description;
+		this.description = builder.description;
 		this.age = builder.age;
 		this.skingColor = builder.skingColor;
 		this.hairColor = builder.hairColor;
 		this.height = builder.height;
 		this.weight = builder.weight;
 	}
-	
+
 	@Override
 	public String toString() {
 		return "Person [fName=" + fName + ", lName=" + lName + ", description=" + description + ", age=" + age

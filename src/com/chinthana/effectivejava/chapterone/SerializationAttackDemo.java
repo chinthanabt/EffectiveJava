@@ -12,13 +12,14 @@ public class SerializationAttackDemo {
 	public static void main(String[] args) throws Exception {
 		serialize();
 		deserialize();	
-		deserialize();
+		//deserialize();
 	}
 
-	private static void serialize() throws IOException, FileNotFoundException {
-		Singleton instance1 = Singleton.INSTANCE;
-		String filename = " serializedFile.ser";	
-		
+	private static void serialize() throws IOException, FileNotFoundException {		
+		//Create Singleton instance here
+		Singleton instance1 = Singleton.INSTANCE;		
+		//File is to write byte stream.
+		String filename = " serializedFile.ser";		
 		// Serialization
 		// Saving of object in a file
 		ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(filename));

@@ -1,5 +1,5 @@
 package com.chinthana.effectivejava.chapterone;
 
-public enum SingletonEnum {
-	INSTANCE;	
+public enum SingletonUsingEnum {
+	INSTANCE;
 }

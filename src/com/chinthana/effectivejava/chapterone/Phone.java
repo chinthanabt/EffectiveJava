@@ -52,5 +52,11 @@ public class Phone {
 		this.cpu = cpu;
 		this.os = os;
 	}
+
+	@Override
+	public String toString() {
+		return "Phone [manumanufacturer=" + manumanufacturer + ", version=" + version + ", ram=" + ram + ", color="
+				+ color + ", memory=" + memory + ", cpu=" + cpu + ", os=" + os + "]";
+	}
 	
 }

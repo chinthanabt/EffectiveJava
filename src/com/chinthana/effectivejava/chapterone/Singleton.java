@@ -3,10 +3,15 @@ package com.chinthana.effectivejava.chapterone;
 import java.io.Serializable;
 
 public class Singleton implements Serializable {
+	
+	public transient String test = "Test";
+	public static String test1 = null;
 
-	private static final long serialVersionUID = 1L;
+	public static final long serialVersionUID = 1L;
+	
 	//Initializing the static singleton instance here.
-	public transient static final Singleton INSTANCE = new Singleton();
+	public static final Singleton INSTANCE = new Singleton();
+	
 
 	//Private constructor to prevent additional objects creation
 	private Singleton() {
@@ -21,10 +26,10 @@ public class Singleton implements Serializable {
 		return INSTANCE;		
 	}
 	
-	//Implement readResolve method to prevent Reflection, Serialization and Cloning
-    protected Object readResolve() 
-    { 
-        return INSTANCE; 
-    }
+//	//Implement readResolve method to prevent Reflection, Serialization and Cloning
+//    protected Object readResolve() 
+//    { 
+//        return INSTANCE; 
+//    }
 
 }
