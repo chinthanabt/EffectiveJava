@@ -17,11 +17,12 @@ public class PhoneNumber {
 	public static PhoneNumber of(final int countryCode, final int areaCode, final int number) {
 		if (COMMON_NUMBER.countryCode == countryCode && COMMON_NUMBER.areaCode == areaCode && COMMON_NUMBER.number == number)
 			return COMMON_NUMBER;
-		else		
+		else					
 			return new PhoneNumber(countryCode, areaCode, number);
 	}		
 	
 }
+
 
 //switch (countryCode) {
 //case 94:
@@ -30,4 +31,5 @@ public class PhoneNumber {
 //	return new IndianPhoneNumber(countryCode, areaCode, number);
 //case 1:
 //	return new AmericanPhoneNumber(countryCode, areaCode, number);				
-//}
+//}	
+

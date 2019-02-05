@@ -12,7 +12,7 @@ public class SerializationAttackDemo {
 	public static void main(String[] args) throws Exception {
 		serialize();
 		deserialize();	
-		//deserialize();
+		deserialize();
 	}
 
 	private static void serialize() throws IOException, FileNotFoundException {		

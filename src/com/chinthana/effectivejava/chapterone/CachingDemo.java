@@ -6,7 +6,7 @@ public class CachingDemo {
 		
 		//Objects create using constructor
 		PhoneNumber p1 = new PhoneNumber(11, 11, 1111111);
-		PhoneNumber p2 = new PhoneNumber(11, 11, 1111111);
+		PhoneNumber p2 = new PhoneNumber(11, 11, 1111111);				
 		
 		// Hash codes will not equal. its obvious!
 		System.out.println("p1.hashCode-" + p1.hashCode());
@@ -22,3 +22,11 @@ public class CachingDemo {
 	}
 
 }
+
+
+
+//PhoneNumber p6 = PhoneNumber.of(94, 11, 1111111);
+//
+//if(p6 instanceof SriLankanPhoneNumber) {
+//	System.out.println("its a srilankan number");
+//}
