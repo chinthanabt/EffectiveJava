@@ -3,62 +3,48 @@ package com.chinthana.effectivejava.chapterone;
 public class Person {
 	private final String fName;
 	private final String lName;
-	private final String description;
-	private final int age;
-	private final String skingColor;
-	private final String hairColor;
-	private final int height;
-	private final int weight;
-
+	private final String title;
+	private final String designation;
+	private final String passportNumber;
+	private final int numberOfDependant;
+	
 	public static class PersonBuilder {
 		private String fName;
 		private String lName;
-		private String description;
-		private int age;
-		private String skingColor;
-		private String hairColor;
-		private int height;
-		private int weight;
-
+		private String title;
+		private String designation;
+		private String passportNumber;
+		private int numberOfDependant;		
+		
 		public PersonBuilder setfName(final String fName) {
 			this.fName = fName;
 			return this;
 		}
-
+		
 		public PersonBuilder setlName(final String lName) {
 			this.lName = lName;
 			return this;
 		}
-
-		public PersonBuilder setDescription(final String description) {
-			this.description = description;
+		
+		public PersonBuilder setDesignation(final String designation) {
+			this.designation = designation;
 			return this;
 		}
-
-		public PersonBuilder setAge(final int age) {
-			this.age = age;
+		
+		public PersonBuilder setTitle(final String title) {
+			this.title = title;
 			return this;
 		}
-
-		public PersonBuilder setSkingColor(final String skingColor) {
-			this.skingColor = skingColor;
+		
+		public PersonBuilder setPassportNumber(final String passportNumber) {
+			this.passportNumber = passportNumber;
 			return this;
 		}
-
-		public PersonBuilder setHairColor(final String hairColor) {
-			this.hairColor = hairColor;
+		
+		public PersonBuilder setNumberOfDependant(final int numberOfDependant) {
+			this.numberOfDependant = numberOfDependant;
 			return this;
-		}
-
-		public PersonBuilder setHeight(final int height) {
-			this.height = height;
-			return this;
-		}
-
-		public PersonBuilder setWeight(final int weight) {
-			this.weight = weight;
-			return this;
-		}
+		}		
 
 		// Build the person here
 		public Person build() {
@@ -70,19 +56,34 @@ public class Person {
 	private Person(PersonBuilder builder) {
 		this.fName = builder.fName;
 		this.lName = builder.lName;
-		this.description = builder.description;
-		this.age = builder.age;
-		this.skingColor = builder.skingColor;
-		this.hairColor = builder.hairColor;
-		this.height = builder.height;
-		this.weight = builder.weight;
+		this.designation = builder.designation;
+		this.title = builder.title;	
+		this.passportNumber = builder.passportNumber;
+		this.numberOfDependant = builder.numberOfDependant;
 	}
 
 	@Override
 	public String toString() {
-		return "Person [fName=" + fName + ", lName=" + lName + ", description=" + description + ", age=" + age
-				+ ", skingColor=" + skingColor + ", hairColor=" + hairColor + ", height=" + height + ", weight="
-				+ weight + "]";
+		StringBuilder stringBuilder = new StringBuilder();
+		stringBuilder.append("Person [fName=");
+		stringBuilder.append(fName);
+		stringBuilder.append(", lName=");
+		stringBuilder.append(lName);
+		stringBuilder.append(", title=");
+		stringBuilder.append(title);
+		stringBuilder.append(", designation=");
+		stringBuilder.append(designation);
+		stringBuilder.append(", passportNumber=");
+		stringBuilder.append(passportNumber);
+		stringBuilder.append(", numberOfDependant=");
+		stringBuilder.append(numberOfDependant);
+		stringBuilder.append("]");
+		return stringBuilder.toString();
 	}
-
+	
+//	public PersonBuilder (final String fName, final String lName) {
+//	this.fName = fName;
+//	this.lName = lName;			
+//}
+	
 }

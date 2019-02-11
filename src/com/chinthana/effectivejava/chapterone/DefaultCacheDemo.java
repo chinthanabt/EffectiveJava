@@ -8,6 +8,7 @@ public class DefaultCacheDemo {
 
 		Boolean b1 = new Boolean(true);
 		Boolean b2 = new Boolean(true);
+		Object o = 10;
 
 		// Getting from cache
 		Boolean b3 = Boolean.valueOf(true);
@@ -25,8 +26,8 @@ public class DefaultCacheDemo {
 		Integer i4 = Integer.valueOf(127);
 
 		// Not cached
-		Integer i5 = Integer.valueOf(128);
-		Integer i6 = Integer.valueOf(128);
+		Integer i5 = 1000;
+		Integer i6 = 1000;
 
 		System.out.println(i1 == i2);
 		System.out.println(i3 == i4);
