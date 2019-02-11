@@ -9,8 +9,8 @@ public  class ReflectionAttackDemo {
 		Singleton instance2 = null;
 		
 		//Call private constructor and create new instance using Reflections
-		Constructor<?>[] constructors = Singleton.class.getDeclaredConstructors();
-		for (Constructor<?> constructor : constructors) {
+		Constructor[] constructors = Singleton.class.getDeclaredConstructors();
+		for (Constructor constructor : constructors) {
 			if (Modifier.isPrivate(constructor.getModifiers())) {
 				constructor.setAccessible(true);
 				instance2 = (Singleton) constructor.newInstance();

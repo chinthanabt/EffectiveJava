@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class Singleton implements Serializable {
 	public static final long serialVersionUID = 1L;
-	//Initializing the static singleton instance here.
+	//Eager initialization of the static singleton instance.
 	static final Singleton INSTANCE = new Singleton();	
 	
 	//Private constructor to prevent additional objects creation
@@ -13,14 +13,14 @@ public class Singleton implements Serializable {
 	}
 
 	//Static factory method to get the singleton instance
-	public static Singleton getInstance() {	
+	public static Singleton getInstance() {
 		return INSTANCE;		
 	}
 
 }
 
 //if(INSTANCE != null) {
-//throw new InstantiationError( "Cannot reflectively create enum objects" );
+//throw new InstantiationError( "Cannot reflectively create objects" );
 //}
 
 

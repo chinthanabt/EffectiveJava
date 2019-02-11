@@ -11,8 +11,7 @@ public class SerializationAttackDemo {
 	
 	public static void main(String[] args) throws Exception {
 		serialize();
-		deserialize();	
-		deserialize();
+		deserialize();			
 	}
 
 	private static void serialize() throws IOException, FileNotFoundException {		
@@ -42,8 +41,7 @@ public class SerializationAttackDemo {
 		Singleton instance2 = (Singleton) objInStream.readObject();
 		objInStream.close();
 		System.out.println("Object has been deserialized");	
-		System.out.println("instance2 hashcode:- " + instance2.hashCode());
-		
+		System.out.println("instance2 hashcode:- " + instance2.hashCode());		
 	}
 
 }
